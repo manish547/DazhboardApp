@@ -1,0 +1,17 @@
+<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Rounded">
+<g clip-path="url(#clip0_151_10619)">
+<rect width="24" height="18" rx="1.74545" fill="white"/>
+<g id="Element">
+<path d="M23.3333 -1H0.666667C-0.806093 -1 -2 0.193907 -2 1.66667V16.3333C-2 17.8061 -0.806093 19 0.666667 19H23.3333C24.8061 19 26 17.8061 26 16.3333V1.66667C26 0.193907 24.8061 -1 23.3333 -1Z" fill="#1A47B8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 13.6666H26V19H-2V13.6666Z" fill="#F93939"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 -1H26V8.33333H-2V-1Z" fill="#FFDA2C"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_151_10619">
+<rect width="24" height="18" rx="1.74545" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -37,6 +37,7 @@ const DataTable = () => {
         const nameData = params?.data;
         return (
           <div className="flex items-center gap-2">
+            
             <Image
               src={`/images/dashboard/${nameData?.image}`}
               width="18"
@@ -44,6 +45,7 @@ const DataTable = () => {
               alt="xyz"
               className="flex justify-center items-center"
             />
+
             {nameData?.name}
           </div>
         );

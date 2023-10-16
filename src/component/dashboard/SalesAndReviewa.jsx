@@ -58,7 +58,7 @@ const SalesAndReviewa = () => {
             <div className='flex flex-col justify-center w-1/2  bg-white shadow-[0px_0px_0px_1px_#12376914] '>
                 <div className='flex items-center justify-between gap-5 px-5 py-4'>
                     <span>Sales by Reseller</span>
-                    <CustomSelect name={'By Travel Date'} dropdownlist={Monthdropdownlist}  />
+                    <CustomSelect name={'By Travel Date'} dropdownlist={Monthdropdownlist} />
                 </div>
                 <div className='flex items-center justify-between py-3 px-4 rounded-lg bg-[#F3F2FB] mx-5 '>
                     <div className='flex flex-col justify-center gap-1'>
@@ -90,12 +90,14 @@ const SalesAndReviewa = () => {
                             return (
                                 <div key={index} className='flex items-center gap-3 '>
                                     <div>
+
                                         <Image
                                             src={image}
                                             width="28"
                                             height="28"
                                             alt='downArrow'
                                         />
+
                                     </div>
                                     <div
 
@@ -185,6 +187,7 @@ const SalesAndReviewa = () => {
                                             <div className='flex flex-col '>
                                                 <span className='text-[#3C3E49] text-sm font-medium leading-5 '>{item.name}</span>
                                                 <div className='flex items-center gap-1.5'>
+
                                                     {Array.from({ length: item.ratting }, (_, i) => (
                                                         <Image
                                                             key={i}
@@ -194,6 +197,7 @@ const SalesAndReviewa = () => {
                                                             alt='star'
                                                         />
                                                     ))}
+                                                    
                                                     <span className='text-[#3C3E49] text-xs font-semibold leading-3 '>{item.ratting}</span>
                                                 </div>
                                             </div>

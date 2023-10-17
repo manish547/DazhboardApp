@@ -77,7 +77,7 @@ const DataTable = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center w-full gap-6 h-full mt-10">
-        <div className="flex w-full mx-auto ag-theme-alpine h-screen max-h-[20vh] md:max-h-[80vh] xl:max-h-[80vh] 3xl:max-h-[30vh]">
+        <div className="flex w-full mx-auto ag-theme-alpine h-screen max-h-[30vh] ">
           <div className="relative overflow-auto" style={{ width: "100%" }}>
             <AgGridReact
               ref={tableRef}

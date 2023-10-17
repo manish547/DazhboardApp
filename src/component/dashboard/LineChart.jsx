@@ -54,9 +54,10 @@ export const data = {
   datasets: [
     {
       label: "Dataset 1",
-      data: [50, 65, 84, 36 , 46, 81],
+      data: [50, 65, 84, 36, 46, 81],
       borderColor: "#15C39A",
-      backgroundColor: "#15C39A"
+      backgroundColor: "#15C39A",
+      tension: 0.3,
     }
   ]
 };

@@ -9,7 +9,7 @@ const CustomSelect = ({ name, dropdownlist }) => {
         <div className='flex items-center py-1.5 px-4 gap-2 bg-white rounded-lg shadow-[0px_0px_0px_1px_#12376914] relative cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
             <span className=''>{name}</span>
             <Image
-                src="/images/Dashboard/downArrow.svg"
+                src="/images/dashboard/downArrow.svg"
                 width="8"
                 height="4"
                 alt='downArrow'

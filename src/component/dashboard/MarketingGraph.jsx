@@ -19,17 +19,17 @@ const dropdownlist = [
     {
         id: 1,
         name: 'Bar Chart',
-        icon: "/images/Dashboard/bar-line-chart.svg"
+        icon: "/images/dashboard/bar-line-chart.svg"
     },
     {
         id: 2,
         name: 'Pie Chart',
-        icon: "/images/Dashboard/pie-chart-03.svg"
+        icon: "/images/dashboard/pie-chart-03.svg"
     },
     {
         id: 3,
         name: 'Line Chart',
-        icon: "/images/Dashboard/line-chart-up-01.svg"
+        icon: "/images/dashboard/line-chart-up-01.svg"
     },
 ]
 const Monthdropdownlist = [
@@ -107,7 +107,7 @@ const MarketingGraph = () => {
 
         <div className='bg-white py-2 px-5 gap-6 rounded-md' >
             <div className=''>
-                <div className='flex items-center justify-between gap-4 p-5'>
+                <div className='flex flex-wrap items-center justify-between gap-4 p-5'>
                     <div className='flex flex-col  justify-center gap-3 '>
                         <span className='text-[#1D2433] text-lg font-semibold leading-[18px] '>Marketing Graph</span>
                         <div className='flex items-center justify-center gap-2'>

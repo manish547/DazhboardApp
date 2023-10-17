@@ -4,11 +4,11 @@ import CustomSelect from '../common/CustomSelect'
 
 
 const peformanceData = [
-    { index: 0, title: "Trip advisor", image: "/images/Dashboard/Ellipse1.svg", performance: "89%", price: '$67,098', color: 'bg-[#397CF629]' },
-    { index: 1, title: "Viator", image: "/images/Dashboard/Ellipse2.svg", performance: "75%", price: '$32,098', color: 'bg-[#EE46BC29]' },
-    { index: 2, title: "Klook", image: "/images/Dashboard/Ellipse3.svg", performance: "65%", price: '$67,098', color: 'bg-[#F7900929]' },
-    { index: 3, title: "Experience Oz", image: "/images/Dashboard/Ellipse4.svg", performance: "35%", price: '$67,098', color: 'bg-[#15C39A29]' },
-    { index: 4, title: "GetYourGuide", image: "/images/Dashboard/Ellipse5.svg", performance: "55%", price: '$67,098', color: 'bg-[#3D39F629]' },
+    { index: 0, title: "Trip advisor", image: "/images/dashboard/Ellipse1.svg", performance: "89%", price: '$67,098', color: 'bg-[#397CF629]' },
+    { index: 1, title: "Viator", image: "/images/dashboard/Ellipse2.svg", performance: "75%", price: '$32,098', color: 'bg-[#EE46BC29]' },
+    { index: 2, title: "Klook", image: "/images/dashboard/Ellipse3.svg", performance: "65%", price: '$67,098', color: 'bg-[#F7900929]' },
+    { index: 3, title: "Experience Oz", image: "/images/dashboard/Ellipse4.svg", performance: "35%", price: '$67,098', color: 'bg-[#15C39A29]' },
+    { index: 4, title: "GetYourGuide", image: "/images/dashboard/Ellipse5.svg", performance: "55%", price: '$67,098', color: 'bg-[#3D39F629]' },
 ]
 
 const Monthdropdownlist = [
@@ -27,7 +27,7 @@ const Monthdropdownlist = [
 const commentsData = [
     {
         id: 0,
-        user: "/images/Dashboard/Oval1.svg",
+        user: "/images/dashboard/Oval1.svg",
         name: "Jonathan Willium",
         ratting: 4.0,
         dayago: '4 days ago',
@@ -35,7 +35,7 @@ const commentsData = [
     },
     {
         id: 1,
-        user: "/images/Dashboard/Oval2.svg",
+        user: "/images/dashboard/Oval2.svg",
         name: "John Miller",
         ratting: 5.0,
         dayago: '4 days ago',
@@ -43,7 +43,7 @@ const commentsData = [
     },
     {
         id: 2,
-        user: "/images/Dashboard/Oval3.svg",
+        user: "/images/dashboard/Oval3.svg",
         name: "Ket Jim",
         ratting: 5.0,
         dayago: '4 days ago',
@@ -54,8 +54,8 @@ const commentsData = [
 
 const SalesAndReviewa = () => {
     return (
-        <div className='flex items-center justify-between w-full gap-6'>
-            <div className='flex flex-col justify-center w-1/2  bg-white shadow-[0px_0px_0px_1px_#12376914] '>
+        <div className='flex xl:flex-row flex-col items-center justify-between w-full gap-6'>
+            <div className='flex flex-col justify-center xl:w-1/2  w-full bg-white shadow-[0px_0px_0px_1px_#12376914] '>
                 <div className='flex items-center justify-between gap-5 px-5 py-4'>
                     <span>Sales by Reseller</span>
                     <CustomSelect name={'By Travel Date'} dropdownlist={Monthdropdownlist} />
@@ -109,7 +109,7 @@ const SalesAndReviewa = () => {
                                             <span className="block">{title ?? ""}</span>
                                             <div className='flex items-center gap-1'>
                                                 {title === 'Trip advisor' && <Image
-                                                    src="/images/Dashboard/flash.svg"
+                                                    src="/images/dashboard/flash.svg"
                                                     width="16"
                                                     height="16"
                                                     alt='downArrow'
@@ -127,7 +127,7 @@ const SalesAndReviewa = () => {
                 <div className='flex items-center justify-center gap-5 p-8 border-t '>
                     <span className='text-[#6956E5] text-center text-base font-semibold leading-4 '>View all reseller data</span>
                     <Image
-                        src="/images/Dashboard/downArrow.svg"
+                        src="/images/dashboard/downArrow.svg"
                         width="8"
                         height="4"
                         alt='downArrow'
@@ -135,7 +135,7 @@ const SalesAndReviewa = () => {
                     />
                 </div>
             </div>
-            <div className='flex flex-col justify-center w-1/2  bg-white shadow-[0px_0px_0px_1px_#12376914] '>
+            <div className='flex flex-col justify-center xl:w-1/2 w-full bg-white shadow-[0px_0px_0px_1px_#12376914] '>
                 <div className='flex items-center justify-between gap-5 px-5 py-4'>
                     <span>Reviews & Ratings</span>
                 </div>
@@ -144,7 +144,7 @@ const SalesAndReviewa = () => {
                         <span className='text-[#475467] text-xs font-medium leading-4 '>Avg. Ratings</span>
                         <div className='flex items-center justify-center gap-1.5'>
                             <Image
-                                src="/images/Dashboard/Star.svg"
+                                src="/images/dashboard/Star.svg"
                                 width="18"
                                 height="18"
                                 alt='star'
@@ -191,7 +191,7 @@ const SalesAndReviewa = () => {
                                                     {Array.from({ length: item.ratting }, (_, i) => (
                                                         <Image
                                                             key={i}
-                                                            src="/images/Dashboard/Star.svg"
+                                                            src="/images/dashboard/Star.svg"
                                                             width="18"
                                                             height="18"
                                                             alt='star'
@@ -215,7 +215,7 @@ const SalesAndReviewa = () => {
                 <div className='flex items-center justify-center gap-5 p-8 border-t '>
                     <span className='text-[#6956E5] text-center text-base font-semibold leading-4 '>View all reseller data</span>
                     <Image
-                        src="/images/Dashboard/downArrow.svg"
+                        src="/images/dashboard/downArrow.svg"
                         width="8"
                         height="4"
                         alt='downArrow'

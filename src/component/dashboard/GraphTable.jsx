@@ -13,12 +13,11 @@ const DataTable = () => {
   };
 
   const gridOptions = {
-    // ... Other grid options
     rowClass: "custom-row-hover",
   };
 
   const onFirstDataRendered = useCallback((params) => {
-    // tableRef?.current?.api?.sizeColumnsToFit();
+
   }, []);
 
   const handleCellClicked = (param) => {
@@ -76,7 +75,7 @@ const DataTable = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center w-full gap-6 h-full mt-10">
+      <div className="flex flex-col items-center justify-center w-full gap-6 h-full ">
         <div className="flex w-full mx-auto ag-theme-alpine h-screen max-h-[30vh] ">
           <div className="relative overflow-auto" style={{ width: "100%" }}>
             <AgGridReact

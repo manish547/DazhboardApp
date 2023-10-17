@@ -14,12 +14,11 @@ const DataTable = () => {
   };
 
   const gridOptions = {
-    // ... Other grid options
     rowClass: "custom-row-hover",
   };
 
   const onFirstDataRendered = useCallback((params) => {
-    // tableRef?.current?.api?.sizeColumnsToFit();
+
   }, []);
 
   const handleCellClicked = (param) => {
@@ -32,8 +31,8 @@ const DataTable = () => {
     {
       field: "name",
       headerName: "Name",
-      minWidth: 280,
-      maxWidth: 300,
+      minWidth: 317,
+      maxWidth: 350,
       cellRenderer: (params) => {
         const nameData = params?.data;
         return (
@@ -66,8 +65,8 @@ const DataTable = () => {
       field: "addiRevenue",
       headerName: "Addi Revenue",
       tooltipField: "memberName",
-      minWidth: 100,
-      maxWidth: 127,
+      /* minWidth: 100,
+      maxWidth: 127, */
     },
     {
       field: "totalPax",
@@ -84,8 +83,8 @@ const DataTable = () => {
     {
       field: "commissionsPaid",
       headerName: "Commissions Paid",
-      minWidth: 120,
-      maxWidth: 150,
+      /* minWidth: 120,
+      maxWidth: 150, */
     },
     {
       field: "leadTime",
@@ -97,6 +96,7 @@ const DataTable = () => {
       field: "reseller",
       headerName: "Reseller",
       minWidth: 80,
+      maxWidth: 120,
       cellRenderer: (params) => {
         const resellerData = params?.data;
         return (
@@ -117,6 +117,7 @@ const DataTable = () => {
       field: "direct",
       headerName: "Direct",
       minWidth: 80,
+      maxWidth: 120,
       cellRenderer: (params) => {
         const directData = params?.data;
         return (

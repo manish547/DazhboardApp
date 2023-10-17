@@ -21,7 +21,7 @@ const dropdownlist = [
     },
 ]
 
-const CustombodyHeader = () => {
+const CustombodyHeader = ({name, info}) => {
     const [active, setActive] = useState('FinancialYear');
 
     const handleSwitch = (value) => {
@@ -31,8 +31,8 @@ const CustombodyHeader = () => {
         <div className='flex flex-col items-start justify-center w-full gap-6 '>
             <div className='w-full flex flex-wrap items-center justify-between gap-5 lg:gap-10'>
                 <div className='flex flex-col items-start justify-center gap-1'>
-                    <span className='text-2xl font-bold leading-6 text-[#3C3E49] '>Dashboard</span>
-                    <span className='text-[#75757A] text-sm font-medium leading-4 '>Here you can see all about your product statistics</span>
+                    <span className='text-2xl font-bold leading-6 text-[#3C3E49] '>{name}</span>
+                    <span className='text-[#75757A] text-sm font-medium leading-4 '>{info}</span>
                 </div>
                 <div className='flex flex-wrap items-center justify-start sm:justify-center gap-5'>
                     <div className='flex items-center justify-center gap-2 rounded-lg bg-white shadow-[0px_0px_0px_1px_#12376914] py-2.5 px-4 '>

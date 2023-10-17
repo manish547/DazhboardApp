@@ -8,12 +8,9 @@ import Image from "next/image";
 const Tableboard = () => {
   const defaultColDef = {
     headerClass: "bg-[#DDE9FF]",
-
-    // sort: 'asc',
   };
 
   const gridOptions = {
-    // ... Other grid options
     rowClass: "custom-row-hover",
   };
 
@@ -31,8 +28,7 @@ const Tableboard = () => {
     {
       field: "name",
       headerName: "Name",
-      minWidth: 280,
-      maxWidth: 300,
+      minWidth: 300,
       cellRenderer: (params) => {
         const nameData = params?.data;
         return (
@@ -52,27 +48,27 @@ const Tableboard = () => {
     {
       field: "sales",
       headerName: "Sales",
-      minWidth: 80,
+      minWidth: 100,
       maxWidth: 120,
     },
     {
       field: "orders",
       headerName: "Orders",
-      minWidth: 80,
+      minWidth: 100,
       maxWidth: 120,
     },
     {
       field: "addiRevenue",
       headerName: "Addi Revenue",
       tooltipField: "memberName",
-      minWidth: 90,
-      maxWidth: 127,
+      minWidth: 100,
+      maxWidth: 200,
     },
     {
       field: "totalPax",
       headerName: "Total Pax",
-      minWidth: 80,
-      maxWidth: 120,
+      minWidth: 100,
+      maxWidth: 127,
     },
     {
       field: "avgOrderValue",
@@ -96,6 +92,7 @@ const Tableboard = () => {
       field: "reseller",
       headerName: "Reseller",
       minWidth: 80,
+      maxWidth: 150,
       cellRenderer: (params) => {
         const resellerData = params?.data;
         return (
@@ -116,6 +113,7 @@ const Tableboard = () => {
       field: "direct",
       headerName: "Direct",
       minWidth: 80,
+      maxWidth: 150,
       cellRenderer: (params) => {
         const directData = params?.data;
         return (

@@ -1,35 +1,31 @@
-import { BlockData, CardData, Data } from '@/assets/dashboardData';
-import Image from 'next/image';
 import React, { useState } from 'react'
+import Image from 'next/image';
+
+import { LineChart } from './LineChart';
+
 import SalesRevenue from './SalesRevenue';
 import MarketingGraph from './MarketingGraph';
 import SalesAndReviewa from './SalesAndReviewa';
-import { LineChart } from './LineChart';
 import Tableboard from "./Tableboard";
 import DataTable from "./DataTable";
 import GraphTable from "./GraphTable";
 import CustomSelect from '../common/CustomSelect';
 
+import { BlockData, CardData, Monthdropdownlist } from '@/assets/dashboardData';
+import CustombodyHeader from '../common/CustombodyHeader';
 
-const Monthdropdownlist = [
-    {
-        id: 1,
-        name: 'This Month',
-        icon: ""
-    },
-    {
-        id: 2,
-        name: 'Priveus Month',
-        icon: ""
-    }
-]
+
+
 
 const Dashboard = () => {
-    const [card, setCard] = useState(CardData)
-    const [block, setBlock] = useState(BlockData);
+    const [card] = useState(CardData)
+    const [block] = useState(BlockData);
     return (
         <div className='flex flex-col justify-center gap-6'>
-            <div className=' flex flex-wrap items-center justify-center md:justify-between  lg:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 mt-10 '>
+
+            <CustombodyHeader name={"Dashboard"} info={"Here you can see all about your product statistics"} />
+
+            <div className=' flex flex-wrap items-center justify-center md:justify-between  lg:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4  '>
                 {
                     card.map((item, index) => {
                         return (
@@ -125,8 +121,8 @@ const Dashboard = () => {
             <SalesRevenue />
 
             <div className="flex flex-col xl:flex-row  xl:items-center xl:justify-between gap-5 w-full ">
-                <div className="bg-white rounded-lg xl:w-1/2  w-full lg:h-[450px] ">
-                    <div className="flex flex-row justify-between px-6  mt-4">
+                <div className="bg-white rounded-lg xl:w-1/2  w-full h-[465px] flex flex-col justify-center gap-4 ">
+                    <div className="flex flex-row justify-between px-6  py-5">
                         <div className="flex flex-col  justify-center gap-3 ">
                             <span className="text-[#1D2433] text-xl font-semibold leading-[18px] ">
                                 Sales by Country of Origin
@@ -135,9 +131,8 @@ const Dashboard = () => {
 
                         <CustomSelect name={'This Month'} dropdownlist={Monthdropdownlist} />
                     </div>
-
                     <GraphTable />
-                    <div className="w-full flex flex-row justify-center items-center p-4 text-lg gap-2 font-semibold text-blue-600 mt-2">
+                    <div className="w-full flex flex-row justify-center items-center p-4 text-lg gap-2 font-semibold text-blue-600  border-t h-16">
                         <span>View all Countries data</span>
                         <Image
                             src="/images/dashboard/downArrow.svg"
@@ -148,7 +143,7 @@ const Dashboard = () => {
                         />
                     </div>
                 </div>
-                <div className="xl:w-1/2 w-full bg-white rounded-lg lg:h-[450px]">
+                <div className="xl:w-1/2 w-full bg-white rounded-lg ">
                     <div className="flex flex-row justify-between px-6 mt-4">
                         <div className="flex flex-col justify-center gap-3 ">
                             <span className="text-[#1D2433] text-xl font-semibold leading-[18px] ">
@@ -157,8 +152,8 @@ const Dashboard = () => {
                         </div>
                         <CustomSelect name={'This Month'} dropdownlist={Monthdropdownlist} />
                     </div>
-                    <div className=" flex flex-wrap items-center justify-center lg:grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 px-6  ">
-                    {/* <div className="flex items-center  flex-wrap gap-4 mt-8 px-6 w-full "> */}
+                    <div className=" flex flex-wrap items-center justify-center lg:grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 px-6 pb-4 ">
+                        {/* <div className="flex items-center  flex-wrap gap-4 mt-8 px-6 w-full "> */}
                         {block.map((item, index) => {
                             return (
                                 <div
@@ -209,28 +204,14 @@ const Dashboard = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            {item.graph === "Up" ? (
-                                                <Image
-                                                    src="/images/dashboard/Upgraph.svg"
-                                                    width="50"
-                                                    height="28"
-                                                    alt={item.graph}
-                                                />
-                                            ) : (
-                                                <Image
-                                                    src="/images/dashboard/Downgraph.svg"
-                                                    width="50"
-                                                    height="28"
-                                                    alt={item.graph}
-                                                />
-                                            )}
+                                            <LineChart />
                                         </div>
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
-                    <div className="w-full flex flex-row justify-center items-center p-4 text-lg gap-2 font-semibold text-blue-600">
+                    <div className="w-full flex flex-row justify-center items-center p-4 text-lg gap-2 font-semibold text-blue-600 border-t h-16 ">
                         <span>View all Financial data</span>
                         <Image
                             src="/images/dashboard/downArrow.svg"

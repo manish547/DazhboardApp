@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react'
 import { Bar } from 'react-chartjs-2';
 import CustomSelect from '../common/CustomSelect';
+import { Chartdropdownlist, Monthdropdownlist } from '@/assets/dashboardData';
 
 
 
@@ -14,36 +15,6 @@ ChartJS.register(
     Tooltip,
     Legend
 );
-
-const dropdownlist = [
-    {
-        id: 1,
-        name: 'Bar Chart',
-        icon: "/images/dashboard/bar-line-chart.svg"
-    },
-    {
-        id: 2,
-        name: 'Pie Chart',
-        icon: "/images/dashboard/pie-chart-03.svg"
-    },
-    {
-        id: 3,
-        name: 'Line Chart',
-        icon: "/images/dashboard/line-chart-up-01.svg"
-    },
-]
-const Monthdropdownlist = [
-    {
-        id: 1,
-        name: 'This Month',
-        icon: ""
-    },
-    {
-        id: 2,
-        name: 'Priveus Month',
-        icon: ""
-    }
-]
 
 const SalesRevenue = () => {
 
@@ -107,7 +78,7 @@ const SalesRevenue = () => {
                         </div>
                     </div>
                     <div className='flex items-center gap-3'>
-                        <CustomSelect name={'Chart Options'} dropdownlist={dropdownlist} />
+                        <CustomSelect name={'Chart Options'} dropdownlist={Chartdropdownlist} />
 
                         <CustomSelect name={'This Month'} dropdownlist={Monthdropdownlist}  />
                     </div>

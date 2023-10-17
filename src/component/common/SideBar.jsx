@@ -65,7 +65,7 @@ const SideBar = ({ children }) => {
                 <div className=' border-r border-[#EBEBEB] min-w-[260px] h-screen '>
                     <div className='px-2 py-3 flex flex-col items-start gap-1'>
                         <span className='p-3 w-full text-[#7E8B99] font-semibold leading-3 text-xs tracking-[0.1px] '>MAIN MENU</span>
-                        <Link href="/dashboard" className='flex items-center  gap-3 bg-[#EDECF9] w-full px-3 py-2.5 rounded-md '>
+                        <Link href="/" className='flex items-center  gap-3 bg-[#EDECF9] w-full px-3 py-2.5 rounded-md '>
                             <Image
                                 src="/images/dashboard/home.svg"
                                 width="18"

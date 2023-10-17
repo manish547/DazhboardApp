@@ -1,56 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CustomSelect from '../common/CustomSelect'
-
-
-const peformanceData = [
-    { index: 0, title: "Trip advisor", image: "/images/dashboard/Ellipse1.svg", performance: "89%", price: '$67,098', color: 'bg-[#397CF629]' },
-    { index: 1, title: "Viator", image: "/images/dashboard/Ellipse2.svg", performance: "75%", price: '$32,098', color: 'bg-[#EE46BC29]' },
-    { index: 2, title: "Klook", image: "/images/dashboard/Ellipse3.svg", performance: "65%", price: '$67,098', color: 'bg-[#F7900929]' },
-    { index: 3, title: "Experience Oz", image: "/images/dashboard/Ellipse4.svg", performance: "35%", price: '$67,098', color: 'bg-[#15C39A29]' },
-    { index: 4, title: "GetYourGuide", image: "/images/dashboard/Ellipse5.svg", performance: "55%", price: '$67,098', color: 'bg-[#3D39F629]' },
-]
-
-const Monthdropdownlist = [
-    {
-        id: 1,
-        name: 'This Month',
-        icon: ""
-    },
-    {
-        id: 2,
-        name: 'Priveus Month',
-        icon: ""
-    }
-]
-
-const commentsData = [
-    {
-        id: 0,
-        user: "/images/dashboard/Oval1.svg",
-        name: "Jonathan Willium",
-        ratting: 4.0,
-        dayago: '4 days ago',
-        description: "It's user friendly. Easy to search, browse, look up orders, track shipping progress, update profile settings..."
-    },
-    {
-        id: 1,
-        user: "/images/dashboard/Oval2.svg",
-        name: "John Miller",
-        ratting: 5.0,
-        dayago: '4 days ago',
-        description: "It's user friendly. Easy to search, browse, look up orders, track shipping progress, update profile settings..."
-    },
-    {
-        id: 2,
-        user: "/images/dashboard/Oval3.svg",
-        name: "Ket Jim",
-        ratting: 5.0,
-        dayago: '4 days ago',
-        description: "It's user friendly. Easy to search, browse, look up orders, track shipping progress, update profile settings..."
-    },
-]
-
+import { Monthdropdownlist, commentsData, peformanceData } from '@/assets/dashboardData'
 
 const SalesAndReviewa = () => {
     return (
